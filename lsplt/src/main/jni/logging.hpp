@@ -1,7 +1,5 @@
 #pragma once
 
-#include <android/log.h>
-
 #ifndef LOG_TAG
 #define LOG_TAG "LSPlt"
 #endif
@@ -14,6 +12,7 @@
 #define LOGE(...) 0
 #define LOGF(...) 0
 #else
+#include <android/log.h>
 #ifndef NDEBUG
 #define LOGD(fmt, ...)                                                                             \
     __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG,                                                \
